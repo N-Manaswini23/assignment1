@@ -21,9 +21,9 @@ Given probability of event(p)=0.5\\
 Therefore probability that event(X)\\ does not occur is
 (1-p)=1-0.5=0.5\\
 We know that binomial probability\\
-\begin{equation}
+\begin{align}
 P(X=k)= \binom{n}{k}p^k({1-p})^{n-k}  \label{1} 
-\end{equation}
+\end{align}
 For P(X=k) to be most likely\\
 outcome(highest probability),
 P(X=k) should be maximum ,where\\
@@ -34,29 +34,29 @@ To find maximum of P(X=k) let us\\
 to p.
 \end{Large}
 \begin{large}
-\begin{align*}
+\begin{align}
 \log P&=\log[\binom{n}{k}p^k({1-p})^{n-k}]  \\
-&=\log[\frac{n!}{(n-k)!k!}]+k \log p\\
- &+(n-k)log (1-p) \\
-\end{align*}
-Differentaiate with respect to p
-\begin{align*}
-\frac{\mathrm{d} \log P}{\mathrm{d} p}&=\frac{\mathrm{d} \log[\frac{n!}{(n-k)!k!}]}{\mathrm{d}p}+k \frac{\mathrm{d}\log p}{\mathrm{d} p}\\
-     &+(n-k) \frac{\mathrm{d}\log (1-p)}{\mathrm{d} p}\\
-     &=0+\frac{k}{p}-\frac{n-k}{1-p}
-\end{align*}
-To find maximum ,substitute $\frac{\mathrm{d} \log P}{\mathrm{d} p}=0$
-\begin{align*}
-\frac{k}{p}&=\frac{n-k}{1-p}\\
-\frac{n-k}{k}&=\frac{1-p}{p}\\
-\frac{n}{k}-1&=\frac{1}{p}-1\\
-\frac{n}{k}&=\frac{1}{p}\\
-k&=np
-\end{align*}
+&=\log[\frac{n!}{(n-k)!k!}]+k \log p \notag \\
+ &+(n-k)log (1-p) \label{2}
+\end{align}
+Differentaiate eq $\eqref{2}$ with respect to p
+\begin{align}
+\frac{\mathrm{d} \log P}{\mathrm{d} p}&=\frac{\mathrm{d} \log[\frac{n!}{(n-k)!k!}]}{\mathrm{d}p}+k \frac{\mathrm{d}\log p}{\mathrm{d} p} \notag \\
+     &+(n-k) \frac{\mathrm{d}\log (1-p)}{\mathrm{d} p} \notag \\
+     &=0+\frac{k}{p}-\frac{n-k}{1-p} \label{3}
+\end{align}
+To find maximum ,substitute $\frac{\mathrm{d} \log P}{\mathrm{d} p}=0$ in $\eqref{3}$
+\begin{align}
+\frac{k}{p}&=\frac{n-k}{1-p} \notag \\
+\frac{n-k}{k}&=\frac{1-p}{p} \notag \\
+\frac{n}{k}-1&=\frac{1}{p}-1 \notag \\
+\frac{n}{k}&=\frac{1}{p} \notag \\
+k&=np \label{4}
+\end{align}
 \end{large}
 \begin{Large}
 \switchcolumn[0]
-substituting n=6,p=1-p=$\frac{1}{2}$\\
+substituting n=6,p=1-p=$\frac{1}{2}$ in $\eqref{4}$\\
 We get $k=6*0.5=3$
 Therefore $P(X=3)$ is maximum,\\
 therefore P(X=3) is most likely \\
